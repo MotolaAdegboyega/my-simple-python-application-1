@@ -25,6 +25,7 @@ uses: docker/metadata-action@v4.4.0
     context: .
     push: true
     tags: ${{ steps.meta.output.tag }}
+    labels: ${{ steps.meta.outputs.labels }}
 
   
   
