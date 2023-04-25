@@ -15,7 +15,7 @@ with:
      password: ${{ secrets.DOCKER_PASSWORD }}
      
 -name:  Extract Metadata (tags. labels) for docker
- id: meta
+id: meta
 uses: docker/metadata-action@v4.4.0
  with:
    images: motolaadegboyega/github-action-repo
