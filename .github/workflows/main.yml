@@ -17,14 +17,14 @@ with:
 -name:  Extract Metadata (tags. labels) for docker
 id: meta
 uses: docker/metadata-action@v4.4.0
- with:
+with:
    images: motolaadegboyega/github-action-repo
 -name: Build and Push the Docker Image
  uses: docker/build-push-action@v4.0.0
-  with:
+ with:
     context: .
     push: true
-    tags: ${{ steps.meta.outputs.tag }}
+    tags: ${{ steps.meta.outputs.tags }}
     labels: ${{ steps.meta.outputs.labels }}
 
   
